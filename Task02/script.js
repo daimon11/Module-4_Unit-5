@@ -1,15 +1,13 @@
-const num = +prompt('Введите число: ', '');
-const newNum = Math.abs(num);
-
 const isPrime = () => {
+  const num = +prompt('Введите число: ', '');
+  const newNum = Math.abs(num);
   let flag = true;
   for (let i = 2; i < newNum; i++) {
     if (newNum % i == 0) {
-      flag = false;
-      break;
+      return false;
     }
   }
-  console.log(flag);
+return newNum > 1;
 }
 
-isPrime();
+console.log(isPrime());
